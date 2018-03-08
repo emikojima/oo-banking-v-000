@@ -10,15 +10,16 @@ class Transfer
  
  def valid? 
    @receiver.valid? && @sender.valid?
-    #binding.pry
  end 
  
  def execute_transaction
-   if self.valid? 
+   if self.valid? && status == "pending"
    sender.balance -= amount 
    receiver.deposit(amount)
    status = "complete"
   else
+    
+    
    
     
     end
