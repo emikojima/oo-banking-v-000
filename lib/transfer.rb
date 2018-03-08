@@ -12,4 +12,6 @@ class Transfer
    @receiver.valid? && @sender.valid?
     #binding.pry
  end 
+ 
+ 
 end
