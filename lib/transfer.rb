@@ -13,24 +13,24 @@ class Transfer
  end 
  
  def execute_transaction
-   if self.valid? && status == "pending" && amount < @sender.balance
-    @sender.balance -= amount 
-    @receiver.deposit(amount)
-    @status = "complete"
+   if self.valid? && status == "pending" && amount
+      @sender.balance
+      @sender.balance -= amount 
+      @receiver.deposit(amount)
+      @status = "complete"
     else
-      #binding.pry
       @status = "rejected"
-    "Transaction rejected. Please check your account balance."
-    
+      "Transaction rejected. Please check your account balance."
     end 
   end 
  
  def reverse_transfer
    #binding.pry
    if @status == "complete"
-   @receiver.balance -= amount 
-   @sender.deposit(amount)
-   @status = "reversed"
-  end
+    @receiver.balance -= amount 
+    @sender.deposit(amount)
+    @status = "reversed"
+    end
  end 
+ 
 end
