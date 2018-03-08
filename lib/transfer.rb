@@ -1,3 +1,4 @@
+require 'pry'
 class Transfer
  attr_accessor :sender, :receiver, :status, :amount
  def initialize(sender, receiver, amount)
@@ -8,7 +9,7 @@ class Transfer
  end 
  
  def valid? 
-  @sender.
-    
+  @sender
+    binding.pry
  end 
 end
