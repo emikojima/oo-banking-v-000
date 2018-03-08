@@ -8,6 +8,6 @@ attr_reader :name
   end
   
   def deposit(amount)
-    @baland + amount 
+    @balance + amount 
   end 
 end
