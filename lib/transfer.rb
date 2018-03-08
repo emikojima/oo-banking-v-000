@@ -18,7 +18,7 @@ class Transfer
     @receiver.deposit(amount)
     @status = "complete"
     else
-      binding.pry
+      #binding.pry
     @status = "Transaction rejected. Please check your account balance."
     end 
   end 
