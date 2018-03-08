@@ -16,6 +16,7 @@ class Transfer
  def execute_transaction
     if !@sender.valid?
       @status = "Transaction rejected. Please check your account balance."
+     binding.pry 
      else
     receiver.deposit(@amount)
     sender.balance -= @amount 
