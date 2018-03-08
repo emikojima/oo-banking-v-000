@@ -23,7 +23,8 @@ class Transfer
   end 
  
  def reverse_transfer
-   binding.pry 
-   
+   #binding.pry 
+     @receiver.balance -= amount 
+   @sender.deposit(amount)
  end 
 end
